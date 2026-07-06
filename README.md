@@ -1,4 +1,4 @@
-# @sabaki/boardmatcher [![Build Status](https://travis-ci.org/SabakiHQ/boardmatcher.svg?branch=master)](https://travis-ci.org/SabakiHQ/boardmatcher)
+# @sabaki/boardmatcher [![CI](https://github.com/SabakiHQ/boardmatcher/actions/workflows/ci.yml/badge.svg)](https://github.com/SabakiHQ/boardmatcher/actions/workflows/ci.yml)
 
 Finds patterns & shapes in Go board arrangements and names moves.
 
