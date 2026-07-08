@@ -18,19 +18,19 @@ t.test('should match pattern', t => {
   let matches = [
     ...boardmatcher.matchPattern(data.unfinished, [14, 2], pattern),
   ]
-  t.deepEqual(matches.map(x => x.symmetryIndex).sort(), [3, 7])
-  t.deepEqual(matches[0].anchors, [
+  t.same(matches.map(x => x.symmetryIndex).sort(), [3, 7])
+  t.same(matches[0].anchors, [
     [16, 2],
     [14, 2],
   ])
-  t.deepEqual(matches[0].vertices, [
+  t.same(matches[0].vertices, [
     [15, 3],
     [14, 3],
     [15, 2],
   ])
 
   matches = [...boardmatcher.matchPattern(data.unfinished, [0, 5], pattern)]
-  t.deepEqual(matches.map(x => x.symmetryIndex).sort(), [0, 1, 5, 7])
+  t.same(matches.map(x => x.symmetryIndex).sort(), [0, 1, 5, 7])
 
   t.end()
 })
@@ -90,7 +90,7 @@ t.test('should respect corner type of pattern', t => {
   }
 
   matches = [...boardmatcher.matchPattern(data.unfinished, [14, 2], pattern)]
-  t.deepEqual(matches.map(x => x.symmetryIndex).sort(), [1, 6])
+  t.same(matches.map(x => x.symmetryIndex).sort(), [1, 6])
 
   t.end()
 })

@@ -4,7 +4,7 @@
   "description": "Finds patterns & shapes in Go board arrangements and names moves.",
   "main": "./src/main.js",
   "scripts": {
-    "test": "tap ./tests/*.test.js",
+    "test": "tap --allow-incomplete-coverage tests/*.test.js",
     "format": "prettier \"**/*.{js,md}\" --write",
     "format-watch": "onchange \"**/*.{js,md}\" -- prettier {{changed}} --write",
     "build": "node ./build.js",
@@ -42,6 +42,6 @@
     "@sabaki/sgf": "^3.4.4",
     "onchange": "^6.1.0",
     "prettier": "^2.1.2",
-    "tap": "^14.10.6"
+    "tap": "^21.7.4"
   }
 }

@@ -17,9 +17,4 @@ jobs:
       # build.js generates library/library.json, which the suite loads via
       # the default pattern library. Build before running the tests.
       - run: npm run build
-      # tap's CLI doesn't run on modern Node, so run each suite directly. Run
-      # from tests/ so require('..') / require('./data') resolve.
-      - name: Test
-        working-directory: tests
-        run: |
-          for f in *.test.js; do echo "== $f =="; node "$f"; done
+      - run: npm test
