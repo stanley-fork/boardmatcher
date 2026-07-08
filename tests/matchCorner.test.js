@@ -17,7 +17,7 @@ t.test('should match corner', t => {
 
   let matches = [...boardmatcher.matchCorner(data.finished, {vertices})]
 
-  t.deepEqual(matches[0], {
+  t.same(matches[0], {
     symmetryIndex: 0,
     invert: false,
     anchors: [],
@@ -30,7 +30,7 @@ t.test('should match corner', t => {
     }),
   ]
 
-  t.deepEqual(matches[0], {
+  t.same(matches[0], {
     symmetryIndex: 0,
     invert: true,
     anchors: [],
@@ -46,7 +46,7 @@ t.test('should match corner', t => {
     }),
   ]
 
-  t.deepEqual(matches[0], {
+  t.same(matches[0], {
     symmetryIndex: 3,
     invert: false,
     anchors: [],
